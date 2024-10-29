@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#007AFF" /> <!-- Цвет выбранного индикатора -->
+    <corners android:radius="4dp" />   <!-- Скругленные углы -->
+    <size android:width="16dp" android:height="8dp"/> <!-- Размер выбранного индикатора -->
+</shape>
