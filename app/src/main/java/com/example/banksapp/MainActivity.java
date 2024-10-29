@@ -25,7 +25,23 @@ public class MainActivity extends AppCompatActivity {
     View view3 = findViewById(R.id.indicator3);
     float density = getResources().getDisplayMetrics().density;
     int dpValue = (int) (view1.getWidth() / density + 0.5f);
-    if (dpValue == 16){
+    int view3Value = (int) (view3.getWidth() / density + 0.5f);
+    if (view3Value == 16){
+        ViewGroup.LayoutParams view1params= view1.getLayoutParams();
+        view1params.width = (int) (8 * density + 0.5f);
+        view1.setLayoutParams(view1params);;
+        view1.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_unselected, null));
+        ViewGroup.LayoutParams view2params= view2.getLayoutParams();
+        view2params.width = (int) (16 * density + 0.5f);
+        view2.setLayoutParams(view2params);
+        view2.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_selected, null));
+        ViewGroup.LayoutParams view3params= view3.getLayoutParams();
+        view3params.width = (int) (8 * density + 0.5f);
+        view3.setLayoutParams(view3params);
+        view3.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_unselected, null));
+    }
+
+    else if (dpValue == 16){
         ViewGroup.LayoutParams view1params= view1.getLayoutParams();
         view1params.width = (int) (8 * density + 0.5f);
         view1.setLayoutParams(view1params);;
@@ -39,7 +55,22 @@ public class MainActivity extends AppCompatActivity {
         view3.setLayoutParams(view3params);
         view3.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_unselected, null));
         }
+    else if (dpValue == 8){
+        ViewGroup.LayoutParams view1params= view1.getLayoutParams();
+        view1params.width = (int) (8 * density + 0.5f);
+        view1.setLayoutParams(view1params);;
+        view1.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_unselected, null));
+        ViewGroup.LayoutParams view2params= view2.getLayoutParams();
+        view2params.width = (int) (8 * density + 0.5f);
+        view2.setLayoutParams(view2params);
+        view2.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_selected, null));
+        ViewGroup.LayoutParams view3params= view3.getLayoutParams();
+        view3params.width = (int) (16 * density + 0.5f);
+        view3.setLayoutParams(view3params);
+        view3.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_unselected, null));
+    }
+
 
 
     }
-    }
+}
