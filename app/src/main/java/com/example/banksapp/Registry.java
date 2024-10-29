@@ -21,5 +21,10 @@ public class Registry extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+public void onSignup(View view) {
+    Intent intent = new Intent(this, Settings.class);
+    startActivity(intent);
     }
 }

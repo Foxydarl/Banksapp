@@ -100,7 +100,7 @@
         android:layout_marginTop="48dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/poppins"
-        android:onClick="signin"
+        android:onClick="onSignup"
         android:text="Sign Up"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
