@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SignIn.class);
         startActivity(intent);
     }
-
     else if (dpValue == 16){
         maintext.setText(getResources().getString(R.string.introtext1));
         subtext.setText(getResources().getString(R.string.introundertext1));
