@@ -4,12 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,8 +15,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         };
-
-    public void onNextClick(View view) {
+    public void onNextClick(View view){
+        Intent intent = new Intent(MainActivity.this, SignIn.class);
+        startActivity(intent);
+    }
+    /*public void onNextClick(View view) {
     View view1 = findViewById(R.id.indicator1);
     View view2 = findViewById(R.id.indicator2);
     View view3 = findViewById(R.id.indicator3);
@@ -41,5 +41,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-    }
+    }*/
     }
