@@ -15,8 +15,7 @@
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:background="@null"
-        android:contentDescription="Back"
-        android:onClick="back"
+        android:contentDescription="@string/back"
         android:src="@drawable/ic_back"
         app:layout_constraintRight_toLeftOf="@id/LabelText"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +34,7 @@
         android:textSize="18sp"
         android:textAlignment="center"
         android:fontFamily="@font/poppins_medium"
-        android:text="Settings"
+        android:text="@string/settings"
         app:layout_constraintLeft_toRightOf="@+id/backbutton"
         app:layout_constraintRight_toLeftOf="@id/logoutbutton"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,8 +47,8 @@
         android:layout_height="42dp"
         android:background="@null"
         android:tintMode="@null"
-        android:contentDescription="logout"
-        android:onClick="doorback"
+        android:contentDescription="@string/logout"
+
         android:src="@drawable/logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@id/LabelText"
@@ -72,23 +71,23 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="General"
+            android:text="@string/general"
             android:textColor="@color/lightgrey"
             android:textSize="14sp" />
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Language">
+            >
             <TextView
                 android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Language"
+                android:text="@string/language"
                 android:fontFamily="@font/poppins_regular"/>
                 />
             <TextView
-                android:text="English"
+                android:text="@string/english"
                 android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,7 +124,7 @@
                 android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="My profile"
+                android:text="@string/my_profile"
                 android:fontFamily="@font/poppins_regular"/>
 
 
@@ -156,7 +155,7 @@
                 android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact Us"
+                android:text="@string/contact_us"
                 android:fontFamily="@font/poppins_regular"/>
             />
 
@@ -183,19 +182,19 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="Security"
+            android:text="@string/security"
             android:textColor="@color/lightgrey"
             android:textSize="14sp" />
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Language">
+            >
             <TextView
                 android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Change Password"
+                android:text="@string/changePassword"
                 android:fontFamily="@font/poppins_regular"/>
 
 
@@ -218,7 +217,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Language"
+
             android:layout_marginTop="20dp">
             <TextView
                 android:layout_weight="200"
@@ -249,7 +248,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose what data you share with us"
+            android:text="@string/dataShare"
             android:fontFamily="@font/poppins_regular"
             android:textSize="12sp"
             android:textColor="@color/lightgrey"/>

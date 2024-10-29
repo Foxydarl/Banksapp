@@ -39,4 +39,10 @@
     <string name="name">Имя</string>
     <string name="phone">Телефон</string>
     <string name="haveAccount">Уже есть аккаунт?</string>
+    <string name="security">Безопасность</string>
+    <string name="changePassword">Изменить пароль</string>
+    <string name="dataShare">Выберите какой информацией вы хотите поделиться с нами</string>
+    <string name="home">Домой</string>
+    <string name="statistics">Стастистика</string>
+    <string name="myCards">Мои карты</string>
 </resources>

@@ -39,5 +39,10 @@
     <string name="name">Name</string>
     <string name="phone">Phone</string>
     <string name="haveAccount">Already have an account?</string>
-
+    <string name="security">Security</string>
+    <string name="changePassword">Change Password</string>
+    <string name="dataShare">Choose what data you share with us</string>
+    <string name="home">Home</string>
+    <string name="statistics">Statistics</string>
+    <string name="myCards">My cards</string>
 </resources>
