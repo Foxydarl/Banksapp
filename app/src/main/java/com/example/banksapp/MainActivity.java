@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     else if (dpValue == 16){
-        maintext.setText("The most Secoure Platfrom for Customer");
-        subtext.setText("Built-in Fingerprint, face recognition and more, keeping you completely safe");
+        maintext.setText(getResources().getString(R.string.introtext1));
+        subtext.setText(getResources().getString(R.string.introundertext1));
         imageView.setImageResource(R.drawable.introsecond);
         ViewGroup.LayoutParams view1params= view1.getLayoutParams();
         view1params.width = (int) (8 * density + 0.5f);
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
         view3.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.indicator_unselected, null));
         }
     else if (dpValue == 8){
-        maintext.setText("Paying for Everything is Easy and Convenient");
-        subtext.setText("Built-in Fingerprint, face recognition and more, keeping you completely safe");
+        maintext.setText(getResources().getString(R.string.introtext2));
+        subtext.setText(getResources().getString(R.string.introundertext2));
         imageView.setImageResource(R.drawable.introthird);
         ViewGroup.LayoutParams view1params= view1.getLayoutParams();
         view1params.width = (int) (8 * density + 0.5f);

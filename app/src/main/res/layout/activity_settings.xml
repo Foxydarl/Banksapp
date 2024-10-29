@@ -5,8 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+
     tools:context=".Settings">
+
+
 
     <ImageButton
         android:id="@+id/backbutton"
@@ -18,22 +20,29 @@
         android:src="@drawable/ic_back"
         app:layout_constraintRight_toLeftOf="@id/LabelText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"/>
 
     <TextView
         android:id="@+id/LabelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_goneMarginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:textSize="18sp"
         android:textAlignment="center"
         android:fontFamily="@font/poppins_medium"
         android:text="Settings"
         app:layout_constraintLeft_toRightOf="@+id/backbutton"
         app:layout_constraintRight_toLeftOf="@id/logoutbutton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <ImageButton
+        android:layout_margin="16dp"
         android:id="@+id/logoutbutton"
         android:layout_width="42dp"
         android:layout_height="42dp"
@@ -47,46 +56,211 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="General"
             android:textColor="@color/lightgrey"
-            android:textSize="14sp"
-            android:fontFamily="@font/poppins_medium"/>
+            android:textSize="14sp" />
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="Language">
             <TextView
-                android:layout_weight="1"
+                android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Language"
-
+                android:fontFamily="@font/poppins_regular"/>
                 />
             <TextView
                 android:text="English"
-                android:layout_weight="1"
+                android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="textEnd"
+                android:fontFamily="@font/poppins_regular"/>
                 />
             <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OpenProfile"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_weight="200"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="My profile"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/arrow"
+                android:layout_weight="1"
                 />
+
         </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="OpenProfile"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:fontFamily="@font/poppins_regular"/>
+            />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Security"
+            android:textColor="@color/lightgrey"
+            android:textSize="14sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Language">
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Language"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose what data you share with us"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            android:textColor="@color/lightgrey"/>
 
     </LinearLayout>
 
+<include
+    layout="@layout/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

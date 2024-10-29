@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Banksapp</string>
     <string name="settings">Settings</string>
@@ -32,12 +33,10 @@
     <string name="arrow">Arrow</string>
     <string name="editProfile">Edit Profile</string>
     <string name="signIn">Sign In</string>
-    <string name="email" translatable="false">E-mail</string>
     <string name="password">Password</string>
-    <string name="newUser">I'm a new user.</string>
+    <string name="newUser">I\'m a new user.</string>
     <string name="signUp">Sign Up</string>
     <string name="name">Name</string>
     <string name="phone">Phone</string>
     <string name="haveAccount">Already have an account?</string>
-
 </resources>

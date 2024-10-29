@@ -9,7 +9,7 @@
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,10 +24,9 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:srcCompat="@drawable/introfirst"
-
+            android:contentDescription="@string/introimagedescription"
             />
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -66,7 +65,7 @@
             android:id="@+id/mainText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fastest Payment in the world"
+            android:text="@string/introtext"
             android:textSize="26sp"
             android:textAlignment="center"
             />
@@ -76,15 +75,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:text="Integrate multiple payment methoods to help you up the process quickly"
+            android:text="@string/introundertext"
             android:textAlignment="center"
 
         />
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Next"
+            android:text="@string/next"
             android:backgroundTint="@color/blue"
             android:onClick="onNextClick"
             >

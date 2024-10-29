@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Settings">
+
+
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@null"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_back"
+        app:layout_constraintRight_toLeftOf="@id/LabelText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/LabelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_goneMarginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/profile"
+        app:layout_constraintLeft_toRightOf="@+id/backbutton"
+        app:layout_constraintRight_toLeftOf="@id/editProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageButton
+        android:layout_margin="16dp"
+        android:id="@+id/editProfile"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@null"
+        android:tintMode="@null"
+        android:contentDescription="@string/editProfile"
+        android:src="@drawable/editprofile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/LabelText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="66dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profilepicture"
+                android:contentDescription="@string/profilePicture"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accountName"
+                    android:fontFamily="@font/poppins_regular"/>
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/profileProfession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profileName"
+                    android:text="@string/profession"
+                    android:textColor="@color/lightgrey"
+                    android:fontFamily="@font/poppins_regular"/>
+
+            </RelativeLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:src="@drawable/profileicon"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/profilePicture"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personalInformation"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                android:contentDescription="@string/arrow"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:src="@drawable/paymentpreferences"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/paymentPreferencies"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paymentPreferencies"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                android:contentDescription="@string/arrow"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:src="@drawable/banksandcards"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/banksAndCards"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/banksAndCards"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                android:contentDescription="@string/arrow"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:src="@drawable/bell"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/notifications"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/notificator"
+                android:layout_weight="1"
+                android:contentDescription="@string/notifications"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:src="@drawable/messagecenter"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/messageCenter"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/messageCenter"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                android:contentDescription="@string/arrow"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:src="@drawable/address"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/address"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                android:contentDescription="@string/arrow"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="toSettings"
+            >
+            <ImageView
+                android:src="@drawable/settings"
+                android:layout_weight="10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/settings"
+                />
+            <TextView
+                android:layout_weight="200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:layout_weight="1"
+                android:contentDescription="@string/arrow"
+                />
+
+        </TableRow>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgrey"
+            android:layout_marginTop="10dp"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@color/morelightgrey"
+    >
+
+    <RadioButton
+        android:id="@+id/home_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Home"
+        android:button="@null"
+        android:drawableTop="@drawable/home"
+        android:gravity="center"
+        android:checked="true"
+        android:textColor="@color/radio_button_text_color"/>
+
+    <RadioButton
+        android:id="@+id/cards_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="My Cards"
+        android:button="@null"
+        android:drawableTop="@drawable/mycards"
+        android:gravity="center"
+        android:textColor="@color/radio_button_text_color"/>
+
+    <RadioButton
+        android:id="@+id/stats_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Statistics"
+        android:button="@null"
+        android:drawableTop="@drawable/statistiks"
+        android:gravity="center"
+        android:textColor="@color/radio_button_text_color"/>
+
+    <RadioButton
+        android:id="@+id/settings_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/settings"
+        android:button="@null"
+        android:drawableTop="@drawable/settings"
+        android:gravity="center"
+        android:textColor="@color/radio_button_text_color"/>
+
+</RadioGroup>

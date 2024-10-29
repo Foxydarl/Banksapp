@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Banksapp</string>
+    <string name="settings">Настройки</string>
+    <string name="logout">Выйти</string>
+    <string name="back">Назад</string>
+    <string name="general">Главный</string>
+    <string name="language">Язык</string>
+    <string name="english">Английский</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="contact_us">Связаться с нами</string>
+    <string name="setting_title">Установить название</string>
+    <string name="setting_value">Установить значение</string>
+    <string name="introtext">Самая быстрая оплата в мире</string>
+    <string name="introundertext">Интегрировано несколько методов оплаты что бы помочь вам ускорить процессы</string>
+    <string name="introtext1">Самая безопасная платформа для Клиентов</string>
+    <string name="introundertext1">Использование Отпечатков пальца, распознования лица и прочее, держат вас в безопасности</string>
+    <string name="introtext2">Платить за всё просто и удобно</string>
+    <string name="introundertext2">Использование Отпечатков пальца, распознования лица и прочее, держат вас в безопасности</string>
+    <string name="introimagedescription">Первая картинка интро</string>
+    <string name="next">Дальше</string>
+    <string name="address">Адресс</string>
+    <string name="messageCenter">Техническая поддержа</string>
+    <string name="notifications">Уведомления</string>
+    <string name="banksAndCards">Банки и карты</string>
+    <string name="paymentPreferencies">Настройки оплаты</string>
+    <string name="personalInformation">Персональная информация</string>
+    <string name="profile">Профиль</string>
+    <string name="accountName">Нигерио Мистерио</string>
+    <string name="profession">Senior Дизайнер</string>
+    <string name="profilePicture">Картинка профиля</string>
+    <string name="picture">Картинка</string>
+    <string name="arrow">Стрелка</string>
+    <string name="editProfile">Изменить профиль</string>
+    <string name="signIn">Войти</string>
+    <string name="password">Пароль</string>
+    <string name="newUser">Я новый пользователь.</string>
+    <string name="signUp">Зарегестрироваться</string>
+    <string name="name">Имя</string>
+    <string name="phone">Телефон</string>
+    <string name="haveAccount">Уже есть аккаунт?</string>
+</resources>
