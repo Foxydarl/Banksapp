@@ -19,6 +19,9 @@
             android:name=".Settings"
             android:exported="false" />
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".SignIn"
             android:exported="false" />
         <activity
