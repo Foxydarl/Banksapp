@@ -3,6 +3,7 @@
     <style name="Base.Theme.Banksapp" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:colorBackground">#161622</item>
         <item name="android:textColor">#FFFFFF</item>
+        <item name="android:windowSplashScreenBackground">@color/darkblue</item>
 
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>

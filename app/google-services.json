@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "620874209770",
+    "firebase_url": "https://test-4098e-default-rtdb.firebaseio.com",
+    "project_id": "test-4098e",
+    "storage_bucket": "test-4098e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620874209770:android:238b4652c4f84c9d473a93",
+        "android_client_info": {
+          "package_name": "com.example.banksapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPsDAx2r2EmRqIuqVC85_qghQVCBzas3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620874209770:android:37c75e7dccf15f5f473a93",
+        "android_client_info": {
+          "package_name": "com.example.testfire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPsDAx2r2EmRqIuqVC85_qghQVCBzas3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
