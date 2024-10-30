@@ -35,7 +35,7 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        TextView signUpText = findViewById(R.id.textsignup);
+        TextView signUpText = findViewById(R.id.textsignin);
 
         FirebaseApp.initializeApp(this);
 
@@ -45,7 +45,7 @@ public class SignIn extends AppCompatActivity {
 
         EditText email = findViewById(R.id.signinemail);
         EditText password = findViewById(R.id.signinpassword);
-        Button signin = findViewById(R.id.buttonsignup);
+        Button signin = findViewById(R.id.buttonsignin);
 
         signUpText.setOnClickListener(new View.OnClickListener() {
             @Override

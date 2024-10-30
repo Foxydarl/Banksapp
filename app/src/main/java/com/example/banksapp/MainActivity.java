@@ -7,12 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     int dpValue = (int) (view1.getWidth() / density + 0.5f);
     int view3Value = (int) (view3.getWidth() / density + 0.5f);
     if (view3Value == 16){
-        Intent intent = new Intent(this, SignIn.class);
+        Intent intent = new Intent(MainActivity.this, SignIn.class);
         startActivity(intent);
     }
     else if (dpValue == 16){
