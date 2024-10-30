@@ -44,5 +44,9 @@ public class Settings extends AppCompatActivity {
 
 
     }
+    public void toTerms(View view){
+
+
+    }
 
 }
