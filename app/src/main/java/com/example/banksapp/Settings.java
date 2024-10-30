@@ -12,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.banksapp.Models.PrivacyPolicy;
+
 
 public class Settings extends AppCompatActivity {
 
@@ -50,5 +50,12 @@ public class Settings extends AppCompatActivity {
         Intent intent = new Intent(Settings.this, PrivacyPolicy.class);
         startActivity(intent);
     }
-
+    public void onLeave(View view){
+        Intent intent = new Intent(Settings.this, SignIn.class);
+        startActivity(intent);
+    }
+    public void toLanguages(View view){
+        Intent intent = new Intent(Settings.this, Languages.class);
+        startActivity(intent);
+    }
 }
