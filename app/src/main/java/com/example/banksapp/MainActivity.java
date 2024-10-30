@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     int dpValue = (int) (view1.getWidth() / density + 0.5f);
     int view3Value = (int) (view3.getWidth() / density + 0.5f);
     if (view3Value == 16){
-        Intent intent = new Intent(this, SignIn.class);
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
     else if (dpValue == 16){

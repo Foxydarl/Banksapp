@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.banksapp.Models.PrivacyPolicy;
+
 public class Settings extends AppCompatActivity {
 
     @Override
@@ -45,8 +47,8 @@ public class Settings extends AppCompatActivity {
 
     }
     public void toTerms(View view){
-
-
+        Intent intent = new Intent(Settings.this, PrivacyPolicy.class);
+        startActivity(intent);
     }
 
 }
