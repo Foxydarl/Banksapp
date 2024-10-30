@@ -1,7 +1,10 @@
 package com.example.banksapp.Models;
 
 public class User {
-    private String name, email, password, phone;
+    private static String name;
+    private String email;
+    private String password;
+    private String phone;
 
     public User() {
 
@@ -13,7 +16,7 @@ public class User {
         this.phone = phone;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 

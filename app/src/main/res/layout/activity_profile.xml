@@ -79,13 +79,13 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="20dp"
                     android:id="@+id/profileName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/accountName"
-                    android:fontFamily="@font/poppins_regular"/>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/accountName" />
 
                 <TextView
                     android:layout_marginStart="20dp"

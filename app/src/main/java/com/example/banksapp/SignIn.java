@@ -79,7 +79,7 @@ public class SignIn extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                startActivity(new Intent(SignIn.this, MainActivity2.class));
+                                startActivity(new Intent(SignIn.this, Profile.class));
                                 finish();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
