@@ -1,5 +1,7 @@
 package com.example.banksapp;
 
+import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,13 +16,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 
+import com.example.banksapp.Models.DatabaseHelper;
 import com.example.banksapp.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser; // Import FirebaseUser
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.FirebaseApp;
@@ -59,7 +62,7 @@ public class Registry extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("TAG", "onClick: " + email.getText().toString());
+                Log.d("TAG", "onClick: " + email);
                 if (TextUtils.isEmpty(email.getText().toString())){
                     Snackbar.make(v, "Введите E-mail", Snackbar.LENGTH_LONG).show();
                     return;
@@ -97,6 +100,8 @@ public class Registry extends AppCompatActivity {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
                                                     Snackbar.make(v, "Регистрация прошла успешно", Snackbar.LENGTH_LONG).show();
+                                                    /*DatabaseHelper dbhelper = new DatabaseHelper();
+                                                    dbhelper.addUser(name.getText().toString(), email.getText().toString(), phone.getText().toString(), password.getText().toString());*/
                                                 }
                                             });
                                 }
