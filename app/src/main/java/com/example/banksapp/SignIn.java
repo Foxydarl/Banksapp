@@ -1,5 +1,7 @@
 package com.example.banksapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -34,6 +36,15 @@ public class SignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+
+        if (isLoggedIn) {
+            // Перейти на главную активность
+            Intent intent = new Intent(this, Profile.class);
+            startActivity(intent);
+            finish(); // Закрыть стартовую активность
+        }
         setContentView(R.layout.activity_sign_in);
         TextView signUpText = findViewById(R.id.textsignin);
 
@@ -79,6 +90,12 @@ public class SignIn extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
+                                Snackbar.make(v, "Вход выполнен успешно", Snackbar.LENGTH_LONG).show();
+                                // В активности входа после успешной аутентификации
+                                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putBoolean("isLoggedIn", true);
+                                editor.apply();
                                 startActivity(new Intent(SignIn.this, Profile.class));
                                 finish();
                             }
@@ -93,5 +110,10 @@ public class SignIn extends AppCompatActivity {
 
             }
         });
+
+    }
+    public void adminbutton(View view) {
+        Intent intent = new Intent(SignIn.this, Settings.class);
+        startActivity(intent);
     }
 }

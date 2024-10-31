@@ -1,11 +1,13 @@
 package com.example.banksapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
@@ -16,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE); // Измените эту строку
+        boolean introSeen = sharedPreferences.getBoolean("introSeen", false); // Получение флага introSeen
+
+        if (introSeen) {
+            // Перейти на главную активность (например, Profile)
+            Intent intent = new Intent(this, SignIn.class); // Замените Profile на имя вашей главной активности
+            startActivity(intent);
+            finish(); // Закрыть MainActivity
+            return; // Прекратить выполнение onCreate()
+        }
         };
 
     public void onNextClick(View view) {
@@ -29,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
     int dpValue = (int) (view1.getWidth() / density + 0.5f);
     int view3Value = (int) (view3.getWidth() / density + 0.5f);
     if (view3Value == 16){
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("introSeen", true); // Сохранение флага introSeen
+        editor.apply();
         Intent intent = new Intent(MainActivity.this, SignIn.class);
         startActivity(intent);
     }

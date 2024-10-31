@@ -1,7 +1,5 @@
 package com.example.banksapp;
 
-import android.content.Context;
-import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,7 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 
-import com.example.banksapp.Models.DatabaseHelper;
 import com.example.banksapp.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
