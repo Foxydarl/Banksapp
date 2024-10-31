@@ -35,7 +35,7 @@ public class Settings extends AppCompatActivity {
                 } else if (checkedId == R.id.stats_button) {
 
                 } else if (checkedId == R.id.settings_button) {
-                    Intent intent = new Intent(Settings.this, Settings.class);
+
                 }
             }
         });
