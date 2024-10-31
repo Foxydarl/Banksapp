@@ -21,15 +21,13 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Registry extends AppCompatActivity {
 
     FirebaseAuth auth;
-    FirebaseDatabase db;
-    DatabaseReference users;
+    FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +38,7 @@ public class Registry extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance();
-        users = db.getReference("Users");
+        firestore = FirebaseFirestore.getInstance(); // Initialize Firestore
 
         EditText email = findViewById(R.id.signupemail);
         EditText password = findViewById(R.id.signuppassword);
@@ -88,17 +85,23 @@ public class Registry extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
-                                FirebaseUser user = authResult.getUser(); // Get FirebaseUser from AuthResult
+                                FirebaseUser user = authResult.getUser();
                                 if (user != null) {
-                                    String uid = user.getUid(); // Get UID
+                                    String uid = user.getUid();
                                     User userInfo = new User(name.getText().toString(), email.getText().toString(), password.getText().toString(), phone.getText().toString());
-                                    users.child(uid).setValue(userInfo) // Use UID as the path
+                                    // Сохранение в Firestore
+                                    firestore.collection("Users").document(uid).set(userInfo)
                                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                 @Override
                                                 public void onSuccess(Void aVoid) {
-                                                    Snackbar.make(v, "Регистрация прошла успешно", Snackbar.LENGTH_LONG).show();
-                                                    /*DatabaseHelper dbhelper = new DatabaseHelper();
-                                                    dbhelper.addUser(name.getText().toString(), email.getText().toString(), phone.getText().toString(), password.getText().toString());*/
+                                                    Log.d("TAG", "User data added to Firestore successfully");
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.e("TAG", "Failed to add user data to Firestore", e);
+                                                    Snackbar.make(v, "Ошибка сохранения в Firestore: " + e.getMessage(), Snackbar.LENGTH_LONG).show();
                                                 }
                                             });
                                 }
@@ -111,8 +114,6 @@ public class Registry extends AppCompatActivity {
                                 Snackbar.make(v, "Ошибка регистрации: " + e.getMessage(), Snackbar.LENGTH_LONG).show();
                             }
                         });
-
-
             }
         });
     }

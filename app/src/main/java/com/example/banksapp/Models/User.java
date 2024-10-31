@@ -2,7 +2,7 @@ package com.example.banksapp.Models;
 
 
 public class User {
-    private static String name;
+    private String name;
     private String email;
     private String password;
     private String phone;
@@ -17,7 +17,7 @@ public class User {
         this.phone = phone;
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 

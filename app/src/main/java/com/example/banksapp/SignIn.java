@@ -16,23 +16,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 
-import com.example.banksapp.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser; // Import FirebaseUser
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.FirebaseApp;
 
 public class SignIn extends AppCompatActivity {
 
     FirebaseAuth auth;
-    FirebaseDatabase db;
-    DatabaseReference users;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +44,6 @@ public class SignIn extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
 
         auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance();
-        users = db.getReference("Users");
 
         EditText email = findViewById(R.id.signinemail);
         EditText password = findViewById(R.id.signinpassword);

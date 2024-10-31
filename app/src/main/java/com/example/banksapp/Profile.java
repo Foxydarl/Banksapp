@@ -18,7 +18,7 @@ public class Profile extends AppCompatActivity {
 
         setContentView(R.layout.activity_profile);
         TextView name = findViewById(R.id.profileName);
-        name.setText(User.getName());
+
 
         };
     public void toSettings(View view){
