@@ -58,4 +58,5 @@ public class Settings extends AppCompatActivity {
         Intent intent = new Intent(Settings.this, Languages.class);
         startActivity(intent);
     }
+
 }

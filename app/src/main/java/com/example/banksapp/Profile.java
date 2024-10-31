@@ -25,6 +25,10 @@ public class Profile extends AppCompatActivity {
         Intent intent = new Intent(Profile.this, Settings.class);
         startActivity(intent);
     }
+    public void toCards(View view){
+        Intent intent = new Intent(Profile.this, AllCards.class);
+        startActivity(intent);
+    }
 
 }
 
