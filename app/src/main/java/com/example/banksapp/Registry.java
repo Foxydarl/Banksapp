@@ -9,10 +9,12 @@ import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
+import android.text.InputType;
+import android.view.MotionEvent;
+import android.view.View;
 
 import com.example.banksapp.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,12 +30,34 @@ public class Registry extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseFirestore firestore;
+    private boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registry);
         TextView signUpText = findViewById(R.id.textsignup);
+
+        EditText passwordEditText = findViewById(R.id.signuppassword);
+
+        passwordEditText.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                int drawableEndPosition = passwordEditText.getWidth() - passwordEditText.getPaddingEnd();
+                if (event.getRawX() >= (drawableEndPosition - passwordEditText.getCompoundDrawables()[2].getBounds().width())) {
+                    if (isPasswordVisible) {
+                        passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                        passwordEditText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock, 0, R.drawable.ic_eye, 0);
+                    } else {
+                        passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                        passwordEditText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock, 0, R.drawable.ic_eye_off, 0);
+                    }
+                    isPasswordVisible = !isPasswordVisible;
+                    passwordEditText.setSelection(passwordEditText.getText().length());
+                    return true;
+                }
+            }
+            return false;
+        });
 
         FirebaseApp.initializeApp(this);
 

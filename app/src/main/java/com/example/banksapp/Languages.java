@@ -46,7 +46,7 @@ public class Languages extends AppCompatActivity {
             } else if (checkedId == R.id.radioButtonFrench) {
                 newLanguageCode = "fr";
             } else if (checkedId == R.id.radioButtonKazakh) {
-                newLanguageCode = "kz";
+                newLanguageCode = "kk";
             }
 
             // Сохранение выбранного языка в SharedPreferences
