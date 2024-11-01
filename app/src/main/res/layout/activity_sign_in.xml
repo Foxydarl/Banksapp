@@ -75,31 +75,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signinpassword" />
 
-    <TextView
-        android:id="@+id/newUser"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/newUser"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonsignin" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonsignin">
 
-    <TextView
-        android:id="@+id/textsignin"
+        <TextView
+            android:id="@+id/newUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/newUser"
+            />
+
+        <TextView
+            android:id="@+id/textsignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/signUp"
+            android:textColor="@color/blue" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonadmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/signUp"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColor="@color/blue"
-        app:layout_constraintStart_toEndOf="@id/newUser"
-
-
-        app:layout_constraintTop_toBottomOf="@+id/buttonsignin" />
+        android:text="Button"
+        android:onClick="adminbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.example.banksapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,34 +16,34 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
 
-import com.example.banksapp.Models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser; // Import FirebaseUser
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.FirebaseApp;
 
 public class SignIn extends AppCompatActivity {
 
     FirebaseAuth auth;
-    FirebaseDatabase db;
-    DatabaseReference users;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+
+        if (isLoggedIn) {
+            // Перейти на главную активность
+            Intent intent = new Intent(this, Profile.class);
+            startActivity(intent);
+            finish(); // Закрыть стартовую активность
+        }
         setContentView(R.layout.activity_sign_in);
         TextView signUpText = findViewById(R.id.textsignin);
 
         FirebaseApp.initializeApp(this);
 
         auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance();
-        users = db.getReference("Users");
 
         EditText email = findViewById(R.id.signinemail);
         EditText password = findViewById(R.id.signinpassword);
@@ -79,6 +81,12 @@ public class SignIn extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
+                                Snackbar.make(v, "Вход выполнен успешно", Snackbar.LENGTH_LONG).show();
+                                // В активности входа после успешной аутентификации
+                                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putBoolean("isLoggedIn", true);
+                                editor.apply();
                                 startActivity(new Intent(SignIn.this, Profile.class));
                                 finish();
                             }
@@ -93,5 +101,10 @@ public class SignIn extends AppCompatActivity {
 
             }
         });
+
+    }
+    public void adminbutton(View view) {
+        Intent intent = new Intent(SignIn.this, Settings.class);
+        startActivity(intent);
     }
 }
